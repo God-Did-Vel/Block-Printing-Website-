@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap");
+
+.about-printing {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px 20px;
+  background: #fff;
+  font-family: "Cormorant Garamond", serif;
+  /* text-transform: none; */
+  box-sizing: border-box;
+  margin-top: -50px;
+}
+
+.about-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Text Section */
+.about-text {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 3rem;
+  color: #a10f2b;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.about-text p {
+  font-size: 1.5rem;
+  color: #1b1a1a;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.about-text h3 {
+  color: #0b4375;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text li {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+/* Image Section */
+.about-images {
+  flex: 1;
+  position: relative;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.img-stack {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.img-box {
+  width: 80%;
+  height: 250px;
+  /* border-radius: 12px; */
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
+}
+
+/* Overlapping effect */
+.img1 {
+  position: relative;
+  z-index: 2;
+  margin-top: -100px;
+  margin-left: -80px;
+}
+
+.img2 {
+  position: absolute;
+  top: 50px;
+  right: -90px;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For large screens 1902px */
+@media (max-width: 1902px) {
+  .about-container {
+    gap: 40px;
+  }
+}
+
+/* Tablets and small laptops */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    text-align: center;
+  }
+
+  .about-images {
+    justify-content: center;
+  }
+
+  .img1 {
+    margin-top: 20px;
+    width: 350px;
+    margin-left: -150px;
+  }
+
+  .img2 {
+    top: 100px;
+    right: -150px;
+    width: 350px;
+  }
+}
+
+/* Tablets portrait */
+@media (max-width: 768px) {
+  .about-printing {
+    padding: 50px 15px;
+  }
+
+  .img-box {
+    height: 250px;
+  }
+.img1{
+    margin-top: 10px;
+}
+  .img2 {
+    top: 75px;
+    right: -130px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text h2 {
+    font-size: 1.3rem;
+  }
+
+  .about-text p {
+    font-size: 1.3rem;
+  }
+
+  .img-stack {
+    max-width: 300px;
+  }
+
+  .img-box {
+    height: 220px;
+    
+  }
+
+  .img2 {
+    top: 85px;
+    right: -45px;
+    width: 250px;
+  }
+  .img1{
+    width: 250px;
+    margin-left: -45px;
+    margin-top: -10px;
+  }
+  
+}
+
+@media (max-width: 375px) {
+.about-text li{
+    font-size: 1.3rem;
+}
+.img1{
+ margin-left: -10px;
+}
+.img2{
+margin-right: 40px;
+margin-top: 50px;
+}
+}
+@media (max-width: 390px){
+    .img1{
+        margin-left: -25px;
+    }
+    .img2{
+        margin-right: 20px;
+        margin-top: 60px;
+    }
+}
+  @media (max-width: 320px) {
+    .img1{
+        margin-left: -1px;
+    }
+    .img2{
+        margin-right: 55px;
+    }
+  }

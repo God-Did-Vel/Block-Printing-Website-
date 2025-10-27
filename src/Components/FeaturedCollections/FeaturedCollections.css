@@ -1,0 +1,179 @@
+/* ===== FEATURED SECTION STYLING ===== */
+
+.featured-section {
+  width: 100%;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-container {
+  width: 100%;
+  max-width: 1902px;
+}
+
+.featured-header {
+  text-align: center;
+  margin-bottom: 60px;
+  text-transform: none;
+}
+
+.featured-header h2 {
+  font-size: 2.6rem;
+  font-weight: 400;
+  color: #1f1f1f;
+  font-family: "cinzel";
+  letter-spacing: 1px;
+}
+
+.featured-header p {
+  margin-top: 15px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555;
+  font-size: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  line-height: 1.6;
+}
+
+/* ===== GRID STYLING ===== */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  justify-content: center;
+  align-items: start;
+  padding: 0 10px;
+}
+
+/* ===== CARD STYLING ===== */
+.featured-card {
+  background: #fff;
+  /* border-radius: 18px; */
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  transform: translateY(0);
+}
+
+.featured-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+.featured-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  overflow: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.featured-card:hover .featured-image {
+  transform: scale(1.1);
+  filter: brightness(0.95);
+}
+
+.featured-text {
+  padding: 22px;
+  text-align: left;
+}
+
+.featured-text h3 {
+  font-size: 1.25rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-family: "cinzel";
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.featured-text p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.featured-card:hover h3 {
+  color: #a26b3d;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Large screens (max 1902px) */
+@media (max-width: 1902px) {
+  .featured-container {
+    max-width: 1400px;
+  }
+}
+
+/* Tablets landscape */
+@media (max-width: 992px) {
+  .featured-header h2 {
+    font-size: 2.2rem;
+  }
+  .featured-grid {
+    gap: 30px;
+  }
+}
+
+/* Tablets portrait */
+@media (max-width: 768px) {
+  .featured-section {
+    padding: 60px 15px;
+  }
+  .featured-header p {
+    font-size: 0.95rem;
+  }
+  .featured-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .featured-header h2 {
+    font-size: 1.8rem;
+  }
+  .featured-card {
+    border-radius: 14px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 390px) {
+  .featured-text h3 {
+    font-size: 1.1rem;
+  }
+  .featured-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Smaller mobile */
+@media (max-width: 375px) {
+  .featured-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 320px) {
+  .featured-header h2 {
+    font-size: 1.4rem;
+  }
+  .featured-header p {
+    font-size: 0.85rem;
+  }
+}

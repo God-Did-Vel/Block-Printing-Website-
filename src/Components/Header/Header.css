@@ -1,0 +1,296 @@
+.header {
+  inline-size: 95%;
+  max-inline-size: 1902px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background: #fff;
+  position: relative;
+  overflow: visible;
+}
+
+/* -------- LOGO -------- */
+.logo img {
+  inline-size: 200px;
+  block-size: auto;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.logo img:hover {
+  animation: logoMove 1.2s ease-in-out infinite;
+}
+
+@keyframes logoMove {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* -------- ZIGZAG MOVING IMAGE -------- */
+.zigzag-wrapper {
+  position: relative;
+  flex-grow: 1;
+  height: 120px;
+  overflow: visible;
+}
+
+.zigzag-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:5%;
+  height: auto;
+  animation: zigzagMove 8s ease-in-out infinite,
+             rotateImage 3s linear infinite;
+  z-index: 0;
+}
+
+/* Zigzag movement left-to-right with slight dip into next page */
+@keyframes zigzagMove {
+  0% {
+    left: 0;
+    top: 0;
+  }
+  20% {
+    left: 30%;
+    top: 45px;
+  }
+  40% {
+    left: 50%;
+    top: 65px;
+  }
+  60% {
+    left: 60%;
+    top: 15px;
+  }
+  80% {
+    left: 80%;
+    top: 75px; /* dips downward */
+  }
+  100% {
+    left: 0;
+    top: 0;
+  }
+}
+
+/* 3D rotation */
+@keyframes rotateImage {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* -------- HAMBURGER -------- */
+.hamburger {
+ display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45px;
+  height: 35px;
+  padding: 7px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  background-color: #d2b48c;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #2c1760;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+/* -------- MENU -------- */
+.menu {
+  position: absolute;
+  top: 170px;
+  right: 80px;
+  background-color: #ac8e8e;
+  padding: 25px 30px;
+  border-radius: 10px;
+  height: 350px;
+  width: 250px;
+  z-index: 10;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+}
+
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  transition: color 0.3s;
+}
+
+.menu a::after {
+  content: "→";
+  margin-left: 8px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.menu a:hover {
+  color: #f4e1d2;
+}
+
+.menu a:hover::after {
+  transform: translateX(3px);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------- RESPONSIVE BREAKPOINTS -------- */
+
+/* 992px */
+@media (max-width: 992px) {
+  .logo img {
+    width: 100px;
+  }
+  .zigzag-image {
+    width: 100px;
+  }
+  .hamburger {
+    width: 40px;
+    height: 30px;
+  }
+  .hamburger span {
+    height: 2px;
+  }
+  .menu {
+    margin-top: -50px;
+  }
+}
+
+/* 768px */
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 20px;
+  }
+  .zigzag-image {
+    width: 90px;
+  }
+  .hamburger {
+    width: 38px;
+    height: 28px;
+  }
+  .menu a {
+    font-size: 1rem;
+  }
+}
+
+/* 480px */
+@media (max-width: 480px) {
+  .logo img {
+    width: 100px;
+  }
+  .zigzag-image {
+    width: 80px;
+  }
+  .hamburger {
+    width: 36px;
+    height: 27px;
+  }
+  .menu {
+    right: 10px;
+    padding: 20px;
+  }
+}
+
+/* 390px */
+@media (max-width: 390px) {
+  .hamburger {
+    width: 34px;
+    height: 26px;
+  }
+  .zigzag-image {
+    width: 70px;
+  }
+  .menu a {
+    font-size: 0.95rem;
+  }
+}
+
+/* 375px */
+@media (max-width: 375px) {
+  .logo img {
+    width: 100px;
+  }
+  .zigzag-image {
+    width: 65px;
+  }
+  .hamburger {
+    width: 32px;
+    height: 24px;
+  }
+  .menu {
+    padding: 15px;
+  }
+}
+
+/* 320px */
+@media (max-width: 320px) {
+  .logo img {
+    width: 80px;
+  }
+  .zigzag-image {
+    width: 55px;
+  }
+  .hamburger {
+    width: 30px;
+    height: 22px;
+  }
+  .menu {
+    width: 65%;
+    right: 7.5%;
+  }
+  .menu a {
+    font-size: 0.9rem;
+  }
+}

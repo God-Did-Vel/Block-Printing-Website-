@@ -1,0 +1,292 @@
+.topbar {
+  width: 100%;
+  background-color: #ac8e8e;
+  color: #fff;
+  font-family: "cinzel", serif;
+  font-size: 10.5px;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  height: 50px;
+}
+
+.topbar-container {
+  max-width: 1902px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.topbar-left {
+  flex: 0 1 auto;
+  text-align: left;
+}
+
+.topbar-right {
+  flex: 1 1 auto;
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 20px;
+  align-items: center;
+}
+
+.topbar-right span {
+  white-space: nowrap;
+}
+
+.social-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-items: right;
+  gap: 15px;
+  padding: 6px 20px;
+  border-radius: 10px;
+  background-color: white;
+  width: 50%;
+  max-width: 400px;
+  margin-right: 50px;
+}
+
+.social-container a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-container img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-container img:hover {
+  transform: scale(1.1);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* 🌐 Large screens (max-width: 1902px) */
+@media (max-width: 1902px) {
+  .topbar-container {
+    padding: 0;
+  }
+}
+
+/* 💻 Laptops (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .topbar {
+    font-size: 10px;
+    padding: 8px 15px;
+  }
+
+  .topbar-right {
+    gap: 15px;
+  }
+
+  .social-container {
+    max-width: 500px;
+  }
+}
+
+/* 💻 Tablets and small laptops (max-width: 992px) */
+@media (max-width: 992px) {
+  .topbar {
+    font-size: 9.5px;
+    padding: 8px 12px;
+    height: 79px;
+  }
+
+  .topbar-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .topbar-left {
+    text-align: center;
+    width: 100%;
+  }
+
+  .topbar-right {
+    justify-content: center;
+    width: 100%;
+    gap: 12px;
+  }
+
+  .social-container {
+    max-width: 450px;
+    gap: 12px;
+  }
+}
+
+/* 📱 Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .topbar {
+    font-size: 9px;
+    padding: 6px 12px;
+    height: 87px;
+  }
+
+  .topbar-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .topbar-left {
+    width: 100%;
+  }
+
+  .topbar-right {
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .topbar-right span {
+    display: block;
+  }
+
+  .social-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    max-width: 100%;
+    padding: 6px 10px;
+  }
+
+  .social-container img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* 📱 Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .topbar {
+    font-size: 8.5px;
+    padding: 5px 10px;
+    height: 76px;
+  }
+
+  .topbar-container {
+    gap: 6px;
+  }
+
+  .topbar-right {
+    gap: 5px;
+  }
+
+  .topbar-right span {
+    display: block;
+    word-break: break-word;
+  }
+
+  .social-container {
+    padding: 5px 8px;
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .social-container img {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* 📱 Extra small devices (max-width: 390px) */
+@media (max-width: 390px) {
+  .topbar {
+    font-size: 8px;
+    padding: 4px 8px;
+    height: 67px;
+  }
+
+  .topbar-container {
+    gap: 4px;
+  }
+
+  .topbar-right {
+    gap: 4px;
+  }
+
+  .topbar-right span {
+    font-size: 7.5px;
+  }
+
+  .social-container {
+    max-width: 100%;
+    gap: 6px;
+    padding: 4px 6px;
+  }
+
+  .social-container img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* 📱 Tiny screens (max-width: 375px) */
+@media (max-width: 375px) {
+  .topbar {
+    font-size: 7.5px;
+    padding: 4px 6px;
+    height: 20%;
+  }
+
+  .topbar-right span {
+    font-size: 7px;
+  }
+
+  .social-container {
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 10px;
+    padding: 3px 5px;
+    margin-bottom: -7px;
+  }
+
+  .social-container img {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+/* 📱 Ultra tiny screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .topbar {
+    font-size: 7px;
+    padding: 3px 5px;
+  }
+
+  .topbar-container {
+    gap: 3px;
+  }
+
+  .topbar-right {
+    gap: 3px;
+  }
+
+  .topbar-right span {
+    font-size: 6.5px;
+  }
+
+  .social-container {
+    max-width: 100%;
+    gap: 4px;
+    padding: 3px 4px;
+  }
+
+  .social-container img {
+    width: 14px;
+    height: 14px;
+  }
+}
