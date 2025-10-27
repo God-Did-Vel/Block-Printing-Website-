@@ -73,7 +73,7 @@
   }
   80% {
     left: 80%;
-    top: 75px; /* dips downward */
+    top: 75px; 
   }
   100% {
     left: 0;
@@ -124,6 +124,7 @@
 .hamburger.open span:nth-child(3) {
   transform: rotate(-45deg) translate(7px, -7px);
 }
+
 /* -------- MENU -------- */
 .menu {
   position: absolute;

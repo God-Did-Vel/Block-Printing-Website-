@@ -14,7 +14,6 @@
   gap: 40px;
   padding-bottom: 30px;
   border-bottom: 1px solid #e0dbd5;
-  /* Changed to flex-start and added justify-content to center menu */
   justify-content: center;
 }
 
@@ -41,7 +40,6 @@
 
 /* Menu Section */
 .footer-menu-section {
-  /* Updated flex to 1 and added justify-content center to center menu */
   flex: 10;
   display: flex;
   flex-direction: column;
