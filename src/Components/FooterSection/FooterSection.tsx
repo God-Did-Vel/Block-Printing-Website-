@@ -1,6 +1,6 @@
 "use client"
 import "./FooterSection.css"
-import logoSquare from "../../images/logo1.png"
+import logoSquare from "../../Images/logo1.png"
 
 export default function FooterSection() {
   return (
